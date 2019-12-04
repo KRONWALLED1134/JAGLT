@@ -26,6 +26,7 @@ Enable the plugin inside your OJS by going to
 
 ```
 Management > Website Settings > Plugins > Theme Plugins and enable the Checkbox beside "JAGLT"
+```
 
 ## Updating stylesheets
 If you want to change the stylesheets used by this template you can find all styles inside the `dev_scss` folder.
