@@ -1,6 +1,8 @@
 # JAGLT
 Just a good looking (OJS) theme
 
+[Demo instance](https://static.99.120.47.78.clients.your-server.de/index.php/showcase/)
+
 ## Prerequisites
 - OJS 3.2.0
 - Node.js
