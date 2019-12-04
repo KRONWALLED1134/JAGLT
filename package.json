@@ -1,0 +1,38 @@
+{
+  "name": "jaglt",
+  "version": "1.0.0",
+  "description": "Just a good looking theme for OJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KRONWALLED1134/JAGLT.git"
+  },
+  "keywords": [
+    "ojs",
+    "pkp",
+    "theme",
+    "plugin"
+  ],
+  "author": "Torben Richter",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/KRONWALLED1134/JAGLT/issues"
+  },
+  "homepage": "https://github.com/KRONWALLED1134/JAGLT#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.4.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}

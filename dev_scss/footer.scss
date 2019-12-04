@@ -1,0 +1,18 @@
+.footer {
+    background-color: $footerBgColor;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: $footerTextColor;
+
+    a:link {
+        color: $footerTextColor;
+    }
+
+    a:visited {
+        color: $footerTextColor;
+    }
+
+    h5 {
+        color: $footerTitleColor;
+    }
+}

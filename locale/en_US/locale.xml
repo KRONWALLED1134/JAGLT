@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/themes/JAGLT/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2019 Torben Richter
+  * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
+  *
+  * JAGLT theme plugin localization strings
+  -->
+<locale name="en_US" full_name="U.S. English">
+    <message key="plugins.themes.JAGLT.name">JAGLT</message>
+    <message key="plugins.themes.JAGLT.description">Just a good looking theme</message>
+    <message key="plugins.themes.JAGLT.latestArticles.authors">Authors</message>
+    <message key="plugins.themes.JAGLT.latestArticles.goToArticle">View article</message>
+    <message key="plugins.themes.JAGLT.latestArticles.pages">Pages</message>
+    <message key="plugins.themes.JAGLT.latestArticles.jumpToSection">Jump to section</message>
+    <message key="plugins.themes.JAGLT.latestArticles.files">Files</message>
+</locale>

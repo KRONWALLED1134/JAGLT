@@ -1,0 +1,35 @@
+.pkp_structure_main {
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding-top: 1rem !important;
+}
+
+.journal-description {
+    margin-bottom: 1rem;
+}
+
+.section-header {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    border-color: $sectionHeaderBorderColor;
+}
+
+.jump-to-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.obj_issue_toc {
+    .row div a {
+        margin-bottom: 1rem;
+    }
+
+    .row div:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.galleys_links {
+    list-style-type: none;
+}

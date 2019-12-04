@@ -1,0 +1,35 @@
+.btn {
+    background-color: gray;
+    border: 0 !important;
+    color: $secondaryColor !important;
+
+    a {
+        &:visited {
+            color: $secondaryColor;    
+        }
+    }
+}
+
+a.btn.btn-primary {
+    color: #ffffff;
+
+    &:visited {
+        color: #ffffff;
+    }
+}
+
+.btn-primary {
+    background-color: $buttonColor !important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}

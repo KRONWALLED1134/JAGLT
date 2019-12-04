@@ -1,0 +1,19 @@
+.navbar-brand-logo {
+	max-height: 50px;
+}
+
+.navbar-default {
+	background-color: $navbarBgColor;
+	border-bottom: $navbarBorderSize $navbarBorderStyle;
+	border-color: $navbarBorderColor;
+	border-radius: 0px;
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+
+        .navbar-nav {
+                > li > a {
+                        color: $navbarLinkColor;
+                }
+        }
+}

@@ -1,0 +1,96 @@
+.pkp_structure_sidebar {
+    padding-top: 1rem;
+
+    .pkp_block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border-radius: .25rem;
+        margin-bottom: 30px;
+
+        border: 0 !important;
+        box-shadow: $sidebarBoxShadow;
+
+
+        .title {
+            padding: .75rem 1.25rem;
+            background-color: $cardHeaderColor;
+            color: $cardHeaderFontColor;
+            text-align: center;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        a {
+            padding: .75rem 1.25rem;
+            display: flex;
+            color: dimgrey;
+        }
+
+        li {
+            border-radius: 0;
+            position: relative;
+            margin-bottom: -1px;
+            background-color: #fff;
+            border-top: 1px solid rgba(0,0,0,.125);
+            display: block;
+
+            form {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        ul li:nth-child(1) {
+            border-top: 0;
+        }
+
+        ul li:last-child {
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+
+        a:hover {
+            text-decoration: none;
+            background-color: #f9f9f9;
+            color: dimgrey;
+        }
+
+        .block_custom {
+            a {
+                padding: 0;
+            }
+
+            .content {
+                padding: .75rem 1.25rem;
+            }
+        }
+
+        .btn {
+            padding: 10px;
+        }
+    }
+
+    .block_make_submission {
+        .content {
+            .block_make_submission_link {
+                background-color: $buttonColor;
+    
+                color: $buttonFontColor;
+                &:visited {
+                    color: $buttonFontColor;    
+                }
+            }
+        }
+    }
+}

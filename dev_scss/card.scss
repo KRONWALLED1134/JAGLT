@@ -1,0 +1,52 @@
+.card {
+    border: 0;
+    box-shadow: $cardBoxShadow;
+
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+
+    .card-header {
+        background: $cardHeaderColor;
+        color: $cardHeaderFontColor;
+    }
+
+    .card-footer {
+        border-top: 1px solid rgba(0,0,0,.02);
+    }
+
+    a:link {
+        color: $cardLinkColor;
+    }
+
+    a:visited {
+        color: $cardLinkVisitedColor;
+    }
+}
+
+@media (min-width: 576px) {
+    .card-deck .card {
+        margin-bottom: $carddeckMarginBottom576;
+        min-width: $carddeckMinWidth576;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-deck .card {
+        min-width: $carddeckMinWidth768;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-deck .card {
+        min-width: $carddeckMinWidth992;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-deck .card {
+        min-width: $carddeckMinWidth1200;
+    }
+}
