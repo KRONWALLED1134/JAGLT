@@ -26,11 +26,12 @@ see the file docs/COPYING.
 
 <h5 class="card-header">
 	{$article->getLocalizedTitle()|strip_unsafe_html}
-	{if $article->getLocalizedSubtitle()}
+
+	{* {if $article->getLocalizedSubtitle()}
 		<span class="subtitle">
 			{$article->getLocalizedSubtitle()|escape}
 		</span>
-	{/if}
+	{/if} *}
 </h5>
 <div class="card-body">
 	<div class="card-text">
