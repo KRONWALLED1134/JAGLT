@@ -271,34 +271,27 @@
 				<div class="item citation">
 					<div class="sub_item citation_display">
 						<div class="label">
-							{translate key="submission.howToCite"}
+							<h3>{translate key="submission.howToCite"}</h3>
 						</div>
 						<div class="value">
 							<div id="citationOutput" role="region" aria-live="polite">
 								{$citation}
 							</div>
 							<div class="citation_formats">
-								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
-									{translate key="submission.howToCite.citationFormats"}
-								</button>
 								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
-									<ul class="citation_formats_styles">
 										{foreach from=$citationStyles item="citationStyle"}
-											<li>
 												<a
 													aria-controls="citationOutput"
 													href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
 													data-load-citation
 													data-json-href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgsJson}"
 												>
-													{$citationStyle.title|escape}
+													<span class="badge badge-pill badge-primary">{$citationStyle.title|escape}</span>
 												</a>
-											</li>
 										{/foreach}
-									</ul>
 									{if count($citationDownloads)}
 										<div class="label">
-											{translate key="submission.howToCite.downloadCitation"}
+											<h4>{translate key="submission.howToCite.downloadCitation"}</h4>
 										</div>
 										<ul class="citation_formats_styles">
 											{foreach from=$citationDownloads item="citationDownload"}
