@@ -11,18 +11,18 @@
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">
 			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
-				{translate key="common.homepageNavigationLabel"}
+				{translate key="common.homepageNavigationLabel"}&nbsp;/&nbsp; 
 			</a>
 		</li>
 		<li>
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
-				{translate key="navigation.archives"}
+				{translate key="navigation.archives"}&nbsp;/&nbsp; 
 			</a>
 		</li>
 		{if $issue}
 			<li class="breadcrumb-item">
 				<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-					{$issue->getIssueIdentification()}
+					{$issue->getIssueIdentification()} 
 				</a>
 			</li>
 		{/if}

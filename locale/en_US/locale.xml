@@ -16,4 +16,6 @@
     <message key="plugins.themes.JAGLT.latestArticles.pages">Pages</message>
     <message key="plugins.themes.JAGLT.latestArticles.jumpToSection">Jump to section</message>
     <message key="plugins.themes.JAGLT.latestArticles.files">Files</message>
+    <message key="plugins.themes.JAGLT.articleDetail.primarySubmissionFiles">Primary submission files</message>
+    <message key="plugins.themes.JAGLT.articleDetail.supplementarySubmissionFiles">Supplementary submission files</message>
 </locale>
