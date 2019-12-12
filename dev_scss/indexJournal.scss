@@ -44,7 +44,9 @@
     padding-left: 1rem;
 
     & a {
-        color: $galleyLinkColor;
+        &:link {
+            color: $galleyLinkColor;
+        }
 
         &:visited {
             color: $galleyLinkVisitedColor;
