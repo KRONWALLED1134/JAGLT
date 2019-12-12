@@ -1,0 +1,36 @@
+.issue-container {
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.issue-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 1.5rem;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+
+.issue-title {
+    font-size: 1.5rem;
+
+    & a {
+        color: $issueTitleLinkColor;
+
+        &:visited {
+            color: $issueTitleLinkColor;
+        }
+    }
+}
+
+.issue-description {
+    font-size: 1rem;
+}
+
+.issue-meta {
+    font-size: 0.75rem;
+}

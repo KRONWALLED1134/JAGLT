@@ -19,7 +19,7 @@
 	<article class="issue-container" style="background-image: url({$issueCover|escape})">
 		<div class="issue-content-box">
 			<div class="issue-content">
-				<h3 class="issue-title">{$issue->getIssueIdentification()|strip_unsafe_html}</h3>
+				<h3 class="issue-title"><a class="title" href="{url op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|strip_unsafe_html}</a></h3>
 				<div class="issue-description">
 					{* Description *}
 					{if $issue->hasDescription()}

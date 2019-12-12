@@ -35,13 +35,9 @@
 
 	{* List issues *}
 	{else}
-		<ul class="issues_archive">
-			{foreach from=$issues item="issue"}
-				<li>
-					{include file="frontend/objects/issue_summary.tpl"}
-				</li>
-			{/foreach}
-		</ul>
+		{foreach from=$issues item="issue"}
+			{include file="frontend/objects/issue_summary.tpl"}
+		{/foreach}
 
 		{* Pagination *}
 		{if $prevPage > 1}
