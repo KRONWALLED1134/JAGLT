@@ -44,19 +44,21 @@ see the file docs/COPYING.
 		{/if}
 				
 		{if !$hideGalleys}
-			{foreach from=$article->getGalleys() item=galley}
-				{if $primaryGenreIds}
-					{assign var="file" value=$galley->getFile()}
-					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
-						{continue}
+			<div class="galley-links">
+				{foreach from=$article->getGalleys() item=galley}
+					{if $primaryGenreIds}
+						{assign var="file" value=$galley->getFile()}
+						{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
+							{continue}
+						{/if}
 					{/if}
-				{/if}
-				{assign var="hasArticleAccess" value=$hasAccess}
-				{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
-					{assign var="hasArticleAccess" value=1}
-				{/if}
-				{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
-			{/foreach}
+					{assign var="hasArticleAccess" value=$hasAccess}
+					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
+						{assign var="hasArticleAccess" value=1}
+					{/if}
+					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
+				{/foreach}
+			</div>
 		{/if}	
 		{if $showDatePublished && $article->getDatePublished()}			
 		<p class="card-text">
