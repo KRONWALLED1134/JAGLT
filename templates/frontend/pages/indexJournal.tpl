@@ -19,7 +19,7 @@ see the file docs/COPYING.
 		</div>
 	{/if}
 
-	{* Journal Description *}
+	{* Journal Description
 	{if $journalDescription}
 		<div class="journal-description">
 			<div class="card">
@@ -31,7 +31,7 @@ see the file docs/COPYING.
 				</div>
 			</div>	
 		</div>
-	{/if}
+	{/if} *}
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
@@ -65,13 +65,13 @@ see the file docs/COPYING.
 	{* Latest issue *}
 	{if $issue}	
 		<div id="homepageIssue row" class="current_issue">
-			<h2 class="section-header">{translate key="journal.currentIssue"}</h2>
+			{* <h2 class="section-header">{translate key="journal.currentIssue"}</h2> 
 			<article class="obj_issue_summary">
 				<h3>
 					{$issue->getIssueIdentification()|strip_unsafe_html}									
-				</h3>
-				{include file="frontend/objects/issue_toc.tpl"}
-			</article> 						
+				</h3> 				
+			</article> 	*}
+			{include file="frontend/objects/issue_toc.tpl"}					
 		</div>
 	{/if}
 

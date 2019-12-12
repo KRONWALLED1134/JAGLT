@@ -20,9 +20,11 @@
 		{block name=searchQuerySimple}
 			<div class="input-group mb-2">
 				<input type="text" name="query" value="{$searchQuery|escape}" class="form-control" id="inlineFormInputGroup" placeholder="Enter search query" aria-label="{translate|escape key="common.searchQuery"}" />
-				<button class="btn btn-primary" type="submit">
-					 <i class="fas fa-search"></i> {translate key="common.search"}
-				</button>
+				<div class="input-group-append">
+					<button class="btn btn-primary" type="submit">
+					 	<i class="fas fa-search"></i>
+					</button>
+				</div>
 			</div>
 		{/block}
 

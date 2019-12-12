@@ -13,6 +13,12 @@
 				{capture assign="sidebarCode"}{call_hook name="Templates::Common::Sidebar"}{/capture}
 				{if $sidebarCode}
 					<aside id="sidebar" class="pkp_structure_sidebar left col-xs-12 col-lg-3" role="complementary" aria-label="{translate|escape key="common.navigation.sidebar"}">
+						<div class="searchForm">
+							{* Search form *}
+							{if $currentContext}
+									{include file="frontend/components/searchForm_simple.tpl" className="pkp_search_mobile"}
+							{/if}
+						</div>
 						{$sidebarCode}
 					</aside><!-- pkp_sidebar.left -->
 				{/if}
@@ -20,23 +26,16 @@
 		</div>
 	</div><!-- pkp_structure_content -->
 
-	<footer class="footer" role="contentinfo">
+	<footer class="footer mt-4" role="contentinfo">
 			{if $pageFooter}
-				<div class="row ml-2 mr-2">
+				<div class="container-fluid">
 					{$pageFooter}
-					<div class="col-md col-lg-3">
-						<a href="{url page="about" op="aboutThisPublishingSystem"}">
-							<img class="img-fluid" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-						</a>
-					</div>
 				</div>
 			{else}
-				<div class="row">
-					<div class="col">
-						<a href="{url page="about" op="aboutThisPublishingSystem"}">
-							<img class="img-fluid d-block mx-auto" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-						</a>
-					</div>
+				<div class="container-fluid">
+					<a href="{url page="about" op="aboutThisPublishingSystem"}">
+						Powered by PKP/OJS
+					</a>
 				</div>
 			{/if}
 		</div>

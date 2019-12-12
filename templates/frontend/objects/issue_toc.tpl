@@ -8,28 +8,43 @@ see the file docs/COPYING.
  * Template file for issue toc
  *
  *}
+ {* Issue introduction area above articles *}
 <div class="obj_issue_toc">
 	{* Indicate if this is only a preview *}
 	{if !$issue->getPublished()}
 		{include file="frontend/components/notification.tpl" type="warning" messageKey="editor.issues.preview"}
 	{/if}
 
-	{* Issue introduction area above articles *}
 	<div class="heading">
-		{* Issue cover image *}
 		{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
-		{if $issueCover}
-			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-				<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
-			</a>
-		{/if}
-
-		{* Description *}
-		{if $issue->hasDescription()}
-			<div class="description">
-				{$issue->getLocalizedDescription()|strip_unsafe_html}
-			</div>
-		{/if}
+		<article class="issue-container" style="background-image: url({$issueCover|escape})">
+			<div class="issue-content-box">
+				<div class="issue-content">
+					<h3 class="issue-title">{$issue->getIssueIdentification()|strip_unsafe_html}</h3>
+					<div class="issue-description">
+						{* Description *}
+						{if $issue->hasDescription()}
+							<div class="description">
+								{$issue->getLocalizedDescription()|strip_unsafe_html}
+							</div>
+						{/if}
+					</div>
+					<div class="issue-meta">						
+						{* Published date *}
+						{if $issue->getDatePublished()}
+							<div class="meta-item">
+								{translate key="submissions.published"}:
+								{$issue->getDatePublished()|date_format:$dateFormatShort}
+							</div>
+							<div class="meta-item">
+								<a class="btn btn-primary" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+									{translate key="journal.viewAllIssues"}
+								</a>
+							</div>
+						{/if}
+					</div>
+				</div>
+		</article>
 
 		{* PUb IDs (eg - DOI) *}
 		{foreach from=$pubIdPlugins item=pubIdPlugin}
@@ -52,25 +67,7 @@ see the file docs/COPYING.
 				</div>
 			{/if}
 		{/foreach}
-
-		{* Published date *}
-		{if $issue->getDatePublished()}
-			<div class="published">
-				<span class="label">
-					{translate key="submissions.published"}:
-				</span>
-				<span class="value">
-					{$issue->getDatePublished()|date_format:$dateFormatShort}
-				</span>
-			</div>
-		{/if}
 	</div>
-
-	<p>
-		<a class="btn btn-primary" href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
-			{translate key="journal.viewAllIssues"}
-		</a>
-	</p>
 
 	{* Full-issue galleys *}
 	{if $issueGalleys}
@@ -88,7 +85,7 @@ see the file docs/COPYING.
 		</div>
 	{/if}
 
-	{if {$publishedSubmissions|@count} > 1}
+	{* {if {$publishedSubmissions|@count} > 1}
 		<h2 class="section-header">{translate key="plugins.themes.JAGLT.latestArticles.jumpToSection"}</h2>
 		<div class="row">
 		{foreach name=sections from=$publishedSubmissions item=section}
@@ -103,27 +100,66 @@ see the file docs/COPYING.
 			{/if}
 		{/foreach}
 		</div>
-	{/if}
+	{/if} *}
 
 	{* Articles *}
 	{foreach name=sections from=$publishedSubmissions item=section}
 		{if $section.articles}
-			{if $section.title}
-				<h2 class="section-header" id="{$section.title|escape}">
-					<div class="row">
-						<div class="col-12">
-							{$section.title|escape} {if $smarty.foreach.sections.iteration != "1"} <a class="btn btn-primary float-right" href="#top"><i class="fas fa-arrow-up"> Go to top</i></a> {/if}
-						</div>
+			{if $smarty.foreach.sections.total == "1"}
+			<div class="row">
+				<div class="col">
+					<div class="section-container">
+						{if $section.title}
+							<h2 class="section-header" id="{$section.title|escape}">
+								{$section.title|escape} {if $smarty.foreach.sections.iteration != "1"} <a class="btn btn-primary float-right" href="#top"><i class="fas fa-arrow-up"> Go to top</i></a> {/if}
+							</h2>
+						{/if}
+						<ul class="article-list">
+						{foreach name=articles from=$section.articles item=article}
+							{if $smarty.foreach.articles.iteration == "1"}
+								<li class="article-list-first">
+									{include file="frontend/objects/article_large_summary.tpl"}
+								</li>
+							{else}
+								<li class="article-list-item">
+									{include file="frontend/objects/article_summary.tpl"}
+								</li>
+							{/if}
+						{/foreach}
+						</ul>
 					</div>
-				</h2>
-			{/if}
-			<div class="card-deck">
-			{foreach from=$section.articles item=article}
-				<div class="card">
-					{include file="frontend/objects/article_summary.tpl"}
 				</div>
-			{/foreach}
 			</div>
+			{else}
+				{if $smarty.foreach.sections.iteration%2 != 0}
+					<div class="row">						
+				{/if}
+						<div class="col-md-12 col-lg-6">
+							<div class="section-container">
+								{if $section.title}
+									<h2 class="section-header" id="{$section.title|escape}">
+										{$section.title|escape} {* {if $smarty.foreach.sections.iteration != "1"} <a class="btn btn-primary float-right" href="#top"><i class="fas fa-arrow-up"> Go to top</i></a> {/if} *}
+									</h2>
+								{/if}
+								<ul class="article-list">
+								{foreach name=articles from=$section.articles item=article}
+									{if $smarty.foreach.articles.iteration == "1"}
+										<li class="article-list-first">
+											{include file="frontend/objects/article_large_summary.tpl"}
+										</li>
+									{else}
+										<li class="article-list-item">
+											{include file="frontend/objects/article_summary.tpl"}
+										</li>
+									{/if}
+								{/foreach}
+								</ul>
+							</div>
+						</div>
+				{if $smarty.foreach.sections.iteration%2 == 0}
+					</div>					
+				{/if}
+			{/if}
 		{/if}
 	{/foreach}
 </div>

@@ -9,3 +9,9 @@
         padding-right: 1rem;
     }
 }
+
+.container-fluid {
+    &.flex-container {
+        flex: 1;
+    }
+}

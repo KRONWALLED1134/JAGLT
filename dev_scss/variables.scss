@@ -21,6 +21,7 @@ $sidebarBoxShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
 // Section
 $sectionHeaderBorderColor: #7792a5;
+$sectionHeaderTextColor: #7792a5;
 
 // Card deck
 $carddeckMinWidth576: 50.1%;
@@ -42,12 +43,15 @@ $buttonFontColor: #ffffff;
 
 // Footer
 $footerBgColor: #7792a5;
-$footerTitleColor: #000000;
-$footerTextColor: #000000;
+$footerTitleColor: #ffffff;
+$footerTextColor: #ffffff;
+$footerFontSize: 1.5rem;
 
 // Article
 $articleTopBorderSize: 10px;
 $articleTopBorderColor: #7792a5;
+$articleLargeHeadingColor: #7792a5;
+$articleHeadingColor: #000000;
 
 // Fontawesome configuration
 $fa-font-path: "fonts";

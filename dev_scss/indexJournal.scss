@@ -8,13 +8,6 @@
     margin-bottom: 1rem;
 }
 
-.section-header {
-    margin-top: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid;
-    border-color: $sectionHeaderBorderColor;
-}
-
 .jump-to-section {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -32,4 +25,125 @@
 
 .galleys_links {
     list-style-type: none;
+}
+
+.issue-container {
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.issue-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 1.5rem;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+
+.issue-title {
+    font-size: 1.5rem;
+}
+
+.issue-description {
+    font-size: 1rem;
+}
+
+.issue-meta {
+    font-size: 0.75rem;
+}
+
+.section-container {
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    border-top: $articleTopBorderSize solid $articleTopBorderColor;
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    color: $sectionHeaderTextColor;
+}
+
+.article-list {
+    list-style: none;
+    padding: 0;
+}
+
+.article-list-first {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+}
+
+.article-list-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+
+    & article {
+        overflow: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .article-thumbnail {
+        position: relative;
+        display: block;
+        background: $primaryColor;
+        width: 80px;
+        height: 80px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        float: left;
+        overflow: hidden;
+
+        & img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.article-large-heading {
+    padding-left: 1rem;
+    margin-top: 1rem;
+
+    & a {
+        color: $articleLargeHeadingColor;
+        
+        &:visited {
+            color: $articleLargeHeadingColor;
+        }
+    }
+}
+
+.article-heading {
+    padding-left: 1rem;
+
+    & a {
+        color: $articleHeadingColor;
+
+        &:visited {
+            color: $articleHeadingColor;
+        }
+    }
+}
+
+.article-meta {
+    padding-left: 1rem;
+}
+
+.galley-links {
+    padding-left: 1rem;
 }

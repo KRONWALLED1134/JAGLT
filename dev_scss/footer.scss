@@ -3,6 +3,8 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     color: $footerTextColor;
+    font-size: $footerFontSize;
+    text-align: center;
 
     a:link {
         color: $footerTextColor;
@@ -14,5 +16,9 @@
 
     h5 {
         color: $footerTitleColor;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 }

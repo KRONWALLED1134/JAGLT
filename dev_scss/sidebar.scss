@@ -93,4 +93,35 @@
             }
         }
     }
+
+    .searchForm {
+        margin-bottom: 30px;
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 1.75rem 1.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 0;
+            border-radius: 3px;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+        
+        & input {
+            background: #fff;
+            width: 100%;
+            padding: 15px 20px;
+            color: rgba(0,0,0,.5);
+            border-radius: 3px;
+        }
+
+        & button {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
 }
