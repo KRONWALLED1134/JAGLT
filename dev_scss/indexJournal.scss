@@ -42,4 +42,12 @@
 
 .galley-links {
     padding-left: 1rem;
+
+    & a {
+        color: $galleyLinkColor;
+
+        &:visited {
+            color: $galleyLinkVisitedColor;
+        }
+    }
 }
