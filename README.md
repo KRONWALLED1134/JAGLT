@@ -21,7 +21,7 @@ npm install
 Register the plugin
 
 ```
-php /path/to/your/ojs/installation/lib/pkp/tools/installPluginVersion.php plugins/generic/pdfMerge/version.xml
+php /path/to/your/ojs/installation/lib/pkp/tools/installPluginVersion.php plugins/themes/JAGLT/version.xml
 ```
 
 Enable the plugin inside your OJS by going to
